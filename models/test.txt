@@ -1,0 +1,6 @@
+flow_id	transition_id	task_name	to_flow_id	to_transition_id	transition_constraint	error_task_name	owner_email		description											time_limit	modified	error_flow_id	error_transition_id	transition_data
+12	0		TWCSFDownload	12		1			(null)			TWCSFError	etienne.vos@ibm.com	Download TWC Seasonal Forecast from TWC Deep Thunder server					320		2020-06-29	07:48:36	12			99	(null)
+12	1		TWCSFTransform	12		2			(null)			TWCSFError	etienne.vos@ibm.com	Convert	NC file	to parameter/ensemble/horizon tif. Monthly forecast 6 months of daily values	320		2020-06-29	07:48:36	12			99	(null)
+12	2		WebUpload	12		3			(null)			TWCSFError	etienne.vos@ibm.com	Web upload	   			      	   	   	      	     	      		320		2020-06-29	07:48:36	12			99	(null)
+12	3		UploadVerification		(null)			(null)			TWCSFError	etienne.vos@ibm.com	Verify web upload										320		2020-06-29	07:48:36	12			99	(null)
+12	99		TWCSFError	(null)		(null)			(null)			TWCSFError	etienne.vos@ibm.com	Handle errors											320		2020-06-29	07:48:36	12			99	(null)
